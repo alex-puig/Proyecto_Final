@@ -25,8 +25,10 @@ module.exports = (sequelize, DataTypes) => {
     fecha: DataTypes.DATEONLY,
 
     idMesero: {type: DataTypes.INTEGER,
-               allowNull: false,},
-
+               references:{
+                model: Mesero,
+                key: idMesero,
+               }},
     mesa: {type: DataTypes.INTEGER,
             allowNull: false,},
         
